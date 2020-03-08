@@ -12,3 +12,10 @@ if (!module.parent) {
 }
 
 module.exports = app;
+const fs = require('fs');
+function file(){
+  //fs.writeFile('./test1','this is test \n and this next test',(e,r)=>{ console.log('e r',e,r) })
+  // fs.unlink('./test1',()=>{})
+  // fs.truncate('./test1',()=>{ console.log('done') })
+}
+file();
