@@ -1,6 +1,5 @@
-const bcrypt = require('bcrypt');
 const Joi = require('joi');
-const Order = require('../models/user.model');
+const Order = require('../models/order.model');
 
 const orderSchema = Joi.object({
   userId: Joi.number().required(),

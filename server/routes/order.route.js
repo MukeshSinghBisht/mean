@@ -8,6 +8,7 @@ module.exports = router;
 
 router.use(passport.authenticate('jwt', { session: false }))
 
+router.post('/createData',asyncHandler(createData))
 router.route('/')
   .post(asyncHandler(insert));
 
@@ -15,4 +16,9 @@ router.route('/')
 async function insert(req, res) {
   let user = await orderCtrl.insert(req.body);
   res.json(user);
+}
+
+async function createData(req, res){
+  let data = await orderCtrl.createData(req.body);
+  res.json(data);
 }
