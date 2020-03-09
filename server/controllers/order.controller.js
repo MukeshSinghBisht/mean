@@ -11,9 +11,12 @@ const orderSchema = Joi.object({
   createdAt: Joi.date().required()
 })
 
+const walletSchema = Joi.object({
+  
+})
 
 module.exports = {
-    insert
+    insert, createData
 }
 
 async function insert(order) {
@@ -21,6 +24,9 @@ async function insert(order) {
   return await new Order(order).save();
 }
 
+async function  createData(data){
+  wallet = await Joi.validate()
+}
 async function update(query, data){
 
 
