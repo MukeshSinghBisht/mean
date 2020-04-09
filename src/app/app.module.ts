@@ -15,12 +15,18 @@ import { CatchErrorInterceptor } from './interceptors/http-error.interceptor';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { WinnerStocksComponent } from './dashboard/winner-stocks/winner-stocks.component';
+import { StockDetailComponent } from './dashboard/stock-detail/stock-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
+    DashboardComponent,
+    WinnerStocksComponent,
+    StockDetailComponent,
   ],
   imports: [
     BrowserModule,
