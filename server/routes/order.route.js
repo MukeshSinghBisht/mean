@@ -13,6 +13,7 @@ router.route('/')
 
 
 async function insert(req, res) {
-  let user = await orderCtrl.insert(req.body);
-  res.json(user);
+  // let user = await orderCtrl.insert(req.body);
+  // res.json(user);
+await orderCtrl.insertOne()
 }
