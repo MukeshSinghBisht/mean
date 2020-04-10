@@ -1,6 +1,29 @@
+<<<<<<< HEAD
 // const bcrypt = require('bcrypt');
 // const Joi = require('joi');
 // const Order = require('../models/user.model');
+=======
+const Joi = require('joi');
+const Order = require('../models/order.model');
+
+const orderSchema = Joi.object({
+  userId: Joi.number().required(),
+  type: Joi.string().required(),
+  price: Joi.number().required(),
+  quantity: Joi.number().required(),
+  total: Joi.number().required(),
+  orderLeft: Joi.number().required(),
+  createdAt: Joi.date().required()
+})
+
+const walletSchema = Joi.object({
+  
+})
+
+module.exports = {
+    insert, createData
+}
+>>>>>>> c080f7f763f8d48e9caaf13cf3f88102eb563d74
 
 // const orderSchema = Joi.object({
 //   userId: Joi.number().required(),

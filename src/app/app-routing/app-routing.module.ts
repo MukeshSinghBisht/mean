@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from '../auth/auth-guard.service';
 import { HomeComponent } from '../home/home.component';
+import { DashboardComponent } from '../dashboard/dashboard.component';
+import { WinnerStocksComponent } from '../dashboard/winner-stocks/winner-stocks.component';
 
 const routes: Routes = [
   {
@@ -15,6 +17,19 @@ const routes: Routes = [
   {
     path: 'admin',
     loadChildren: () => import('../admin/admin.module').then(m => m.AdminModule)
+  },
+  {
+    path: 'dashboard',
+    children: [
+      {
+        path: '',
+        component: DashboardComponent
+      },
+      {
+        path: 'winner',
+        component: WinnerStocksComponent
+      }
+    ]
   }
 ];
 
