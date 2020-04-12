@@ -1,0 +1,15 @@
+<mat-card>
+    <mat-card-content>
+        <ng-container *ngIf='stockList'>
+            <table>
+                <tr *ngFor='let s of stocks'>
+                    <td>
+                        <mat-label>{{s}} </mat-label>
+                    </td>
+                    <td><button mat-raised-button color='primary' (click)='selectStock(s)'>Select
+                            Stock</button> </td>
+                </tr>
+            </table>
+        </ng-container>
+    </mat-card-content>
+</mat-card>

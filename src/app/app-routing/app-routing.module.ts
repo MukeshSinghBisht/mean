@@ -19,7 +19,11 @@ const routes: Routes = [
     loadChildren: () => import('../admin/admin.module').then(m => m.AdminModule)
   },
   {
-    path: 'dashboard',
+    path: 'trade',
+    loadChildren: ()=> import('../trade/trade.module').then(m => m.TradeModule)
+  },
+  {
+    path: 'analysis',
     children: [
       {
         path: '',
@@ -29,6 +33,7 @@ const routes: Routes = [
         path: 'winner',
         component: WinnerStocksComponent
       }
+      
     ]
   }
 ];

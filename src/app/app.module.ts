@@ -6,6 +6,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { SharedModule } from './shared/shared.module';
 import { AuthModule } from './auth/auth.module';
+import {TradeModule} from './trade/trade.module'
 
 import { AppComponent } from './app.component';
 import { AdminModule } from './admin/admin.module';
@@ -26,8 +27,8 @@ import { StockDetailComponent } from './dashboard/stock-detail/stock-detail.comp
     HomeComponent,
     DashboardComponent,
     WinnerStocksComponent,
-    StockDetailComponent,
-  ],
+    StockDetailComponent
+    ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -37,6 +38,7 @@ import { StockDetailComponent } from './dashboard/stock-detail/stock-detail.comp
     AuthModule,
     AdminModule,
     AppRoutingModule,
+    TradeModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,

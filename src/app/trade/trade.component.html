@@ -1,0 +1,40 @@
+<table  class="example-card">
+    <tr>
+        <td>
+            <mat-card>
+                <mat-card-content>
+                    <table>
+                        <tr>
+                            <td>
+
+                                <app-order [selectedStock]='selectedStock' >
+                                    <strong class='head'>Buy</strong>
+                                    <button mat-raised-button color="primary" id='btn'
+                                        (click)='childPlaceOrder()'>Buy</button>
+
+                                </app-order>
+                            </td>
+                            <td class='col-md-3'></td>
+
+                            <td></td>
+                            <td>
+                                <app-order [selectedStock]='selectedStock' >
+                                    <strong class='head'>Sell</strong>
+                                    <button mat-raised-button color="primary" id='btn'
+                                        (click)='childPlaceOrder()'>Sell</button>
+                                </app-order>
+                            </td>
+
+                        </tr>
+                    </table>
+
+                </mat-card-content>
+
+            </mat-card>
+
+        </td>
+        <td>
+            <app-stocks (clickSelectStock)='selectStock($event)'></app-stocks>
+        </td>
+    </tr>
+</table>
